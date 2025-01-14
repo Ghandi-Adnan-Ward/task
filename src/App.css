@@ -3,11 +3,21 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f9f9f9;
+  transition: background-color 0.3s ease, filter 0.3s ease;
+
 }
+ 
+
+/* عند عرض popup */
+ body.popup-active {
+  background-color: rgba(0, 0, 0, 0.5); 
+  overflow: hidden;
+}
+
+ 
 
 .menu-container {
   padding: 20px;
-  
 }
 
 .menu {
@@ -15,9 +25,13 @@ body {
   display: inline-block;
   border-radius: 8px; 
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); 
-  
-}
 
+}
+.menu1 {
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+}
 .menu-title {
   background-color: #007bff;
   color: white;
@@ -25,6 +39,7 @@ body {
   border-radius: 4px;
   cursor: pointer;
   font-weight: bold;
+
 }
 
 .menu-title:hover {
@@ -32,7 +47,7 @@ body {
 
 }
 
-.popup {
+/* .popup {
   display: none;
   position: absolute;
   top: 24px;
@@ -44,13 +59,44 @@ body {
   z-index: 1000;
   min-width: 220%;
   padding:5px 5px;
- 
-}
+  transition: all 0.3s ease;
 
-.menu:hover > .popup {
+} */
+.menu-title:hover > .popup {
   display: block;
+  
+}
+.popup {
+  display: block;
+  position: absolute;
+  top:10%;
+  left: 5%;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  min-width: 20%;
+  padding: 5px 5px;
+  transition: all 0.3s ease;
 }
 
+ 
+
+/* @keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+ 
+    opacity: 1;
+    transform: translateY(0);
+  }
+} */
+
+
+ 
 .menu-item {
   position: relative;
   padding: 10px 25px;
@@ -69,6 +115,7 @@ body {
 .menu-item:hover {
   background-color: #f1f1f1;
   cursor: pointer;
+  
 }
 
 .menu-item span {
@@ -95,6 +142,7 @@ body {
 
 .menu-item:hover > .popup {
   display: block;
+
 }
 
 .popup li {
