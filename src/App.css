@@ -165,7 +165,7 @@ body {
 
   .popup {
     position: absolute;
-    display: none;
+    display: block;
     box-shadow: none;
     border: none;
     padding: 0;
@@ -185,7 +185,7 @@ body {
     border: none;
     padding: 0;
     min-width: 40px;
-
+    
   }
   .menu-item span {
     font-size: 1px;

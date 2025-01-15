@@ -207,7 +207,7 @@ const App = () => {
               onMouseLeave={handleMouseLeave}
          >
              {menuData.map((item, index) => (
-               <MenuItem key={index} showPopup={showPopup} {...item}/>
+               <MenuItem key={index}  {...item}/>
              ))}
            </ul>
               </Grid2>
