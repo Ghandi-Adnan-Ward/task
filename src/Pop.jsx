@@ -2,6 +2,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import "./App.css";
+import { Checkbox } from "@mui/material";
 
 const MenuItem = ({ icon, label, children,onChildChecked  }) => {
   const [isChecked, setIsChecked] = useState(false);
@@ -29,11 +30,8 @@ const MenuItem = ({ icon, label, children,onChildChecked  }) => {
   };
   return (
     <li className='menu-item' >
-  ````<input
-          type="checkbox"
-          checked={isChecked}
-          onChange={handleCheckboxChange}
-        />     
+      <Checkbox checked={isChecked} onChange={handleCheckboxChange} />
+        
         {icon}
         <span>{label}</span>
         {children  && (
